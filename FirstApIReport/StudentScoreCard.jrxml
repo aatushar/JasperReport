@@ -1,0 +1,204 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="StudentScoreCard" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf65ac3e-46d4-4ed2-9ccd-ae5e00fe32bf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#1B2F4F">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="TABLE_DATASET" uuid="40b86e35-14be-4456-a3a8-b9ffe6afb660">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BEAN_DATA_ADAPTOR"/>
+		<query language="sql"><![CDATA[]]></query>
+		<field name="subjectName" class="java.lang.String"/>
+		<field name="totalMarks" class="java.lang.Double"/>
+		<field name="marksObtaiend" class="java.lang.Double"/>
+		<variable name="total" calculation="Sum" class="java.lang.Double">
+			<expression><![CDATA[$F{totalMarks}]]></expression>
+		</variable>
+		<variable name="obtainedTotal" calculation="Sum" class="java.lang.Double"/>
+		<variable name="percentage" class="java.lang.Double">
+			<expression><![CDATA[$V{obtainedTotal}/$V{total}*100]]></expression>
+		</variable>
+	</dataset>
+	<parameter name="TABLE_DATA_SOURCE_MAP" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="name" class="java.lang.String"/>
+	<field name="year" class="java.lang.String"/>
+	<field name="advisor" class="java.lang.String"/>
+	<field name="gradingPeriod" class="java.lang.String"/>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<element kind="staticText" uuid="6de58bb7-d021-4bf8-a47c-75fa4b536d64" x="110" y="10" width="300" height="60" fontName="Arial" fontSize="40.0" bold="true">
+				<text><![CDATA[REPORT CARD]]></text>
+			</element>
+			<element kind="staticText" uuid="abb94c25-b226-4e6d-a08e-24f505b0df3b" x="155" y="70" width="210" height="30" fontName="Arial" fontSize="15.0" bold="true">
+				<text><![CDATA[GOVERMENT HIGH SCHOOL]]></text>
+			</element>
+			<element kind="staticText" uuid="d93f9cb2-2b53-4ad7-8cfd-b5f19b265226" x="38" y="117" width="153" height="23" fontSize="14.0">
+				<text><![CDATA[Name:-]]></text>
+			</element>
+			<element kind="staticText" uuid="b4c61fe8-fea1-466a-b737-64227008d1f0" x="260" y="117" width="153" height="23" fontSize="14.0">
+				<text><![CDATA[Year:-]]></text>
+			</element>
+			<element kind="staticText" uuid="294d1ad8-7115-4b22-8af7-c0e9df7be1aa" x="37" y="190" width="103" height="23" fontSize="14.0">
+				<text><![CDATA[Advisior:-]]></text>
+			</element>
+			<element kind="staticText" uuid="f37b42d2-3429-49ff-b646-3223ba6f30fc" x="257" y="190" width="108" height="23" fontSize="14.0">
+				<text><![CDATA[Grading Point :-]]></text>
+			</element>
+			<element kind="line" uuid="29a6e29f-678d-40ff-bce9-41de04668dbf" x="36" y="153" width="203" height="1">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="line" uuid="6cb84cf5-a60e-4bea-b6e4-2a8f1db2b9cf" x="260" y="153" width="203" height="1">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="line" uuid="5139519d-7d29-4398-8a4b-8d7482681f3c" x="40" y="240" width="203" height="1">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="line" uuid="17e87bb9-e3ca-4685-b6fe-c11640e691e5" x="260" y="240" width="203" height="1">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="component" uuid="d8395f98-36d1-4b67-96ca-870080f2b6e1" x="19" y="270" width="430" height="200" forecolor="#EDE4E4">
+				<component kind="table">
+					<datasetRun uuid="8cc0498e-87e7-4b4b-a5a9-9eb7642e6e05" subDataset="TABLE_DATASET">
+						<dataSourceExpression><![CDATA[$P{TABLE_DATA_SOURCE_MAP}]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="single" uuid="d7912ff4-8d41-4a0d-9652-9d9e3975e2a2" width="100">
+						<tableFooter height="30" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="3ea84c05-9599-42ab-a40e-c75fa067b8a6" x="0" y="0" width="100" height="30" forecolor="#F7EBEB" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Percentage]]></text>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</element>
+						</tableFooter>
+						<columnHeader height="30" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="8fe38073-f087-49e5-90ee-19665b0b5326" x="0" y="0" width="100" height="30" forecolor="#F7EBEB" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[SUBJECT]]></text>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="e777c978-eea6-4122-8dcb-796a4f0928f7" x="0" y="0" width="100" height="30" forecolor="#F7EBEB" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[TOTAL]]></text>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</element>
+						</columnFooter>
+						<detailCell height="30" style="Table 1_TD">
+							<element kind="textField" uuid="43864baf-b878-4de1-8db1-24e303749763" x="0" y="0" width="100" height="30" bold="true">
+								<paragraph leftIndent="6"/>
+								<expression><![CDATA[$F{subjectName}]]></expression>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+					</column>
+					<column kind="single" uuid="b0b5b17a-4661-4436-85b8-c0017b0a5e48" width="140">
+						<tableFooter height="30" rowSpan="1" style="Table 1_CH">
+							<element kind="textField" uuid="35b1abee-3fb5-41c8-a624-8cf6b850408e" x="0" y="0" width="140" height="30" forecolor="#FAF3F2" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<paragraph leftIndent="6"/>
+								<expression><![CDATA[$V{percentage}+"%"]]></expression>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							</element>
+						</tableFooter>
+						<columnHeader height="30" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="d345c3fc-5a65-4904-a7f7-566e7be64771" x="0" y="0" width="140" height="30" forecolor="#F2E6E6" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[TOTAL MARKS]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" rowSpan="1" style="Table 1_CH">
+							<element kind="textField" uuid="2b408a24-9234-4419-a082-cb767b56b04a" x="0" y="0" width="140" height="30" forecolor="#FAF3F2" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<paragraph leftIndent="6"/>
+								<expression><![CDATA[$V{total}]]></expression>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							</element>
+						</columnFooter>
+						<detailCell height="30" style="Table 1_TD">
+							<element kind="textField" uuid="4ae2a0ca-8079-4f5f-831b-33803504df0f" x="0" y="0" width="140" height="30" bold="true">
+								<paragraph leftIndent="6"/>
+								<expression><![CDATA[$F{totalMarks}]]></expression>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+					</column>
+					<column kind="single" uuid="1e4e4b7e-bc39-416f-b968-92d6b2fcf2ca" width="130">
+						<tableFooter height="30" rowSpan="1" style="Table 1_CH"/>
+						<columnHeader height="30" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="313ef440-27b0-454b-9207-d954c21621d0" x="0" y="0" width="130" height="30" forecolor="#FCF5F5" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[OBTAIN MARKS	]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" rowSpan="1" style="Table 1_CH">
+							<element kind="textField" uuid="96ab1dfb-3a14-4077-993d-e33271071497" x="0" y="0" width="130" height="30" forecolor="#FAF3F2" bold="true" hTextAlign="Center" vTextAlign="Middle">
+								<paragraph leftIndent="6"/>
+								<expression><![CDATA[$F{marksObtaiend}]]></expression>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							</element>
+						</columnFooter>
+						<detailCell height="30" style="Table 1_TD">
+							<element kind="textField" uuid="38ebb115-3e75-43de-9e08-ac4ee9afbd51" x="0" y="0" width="130" height="30" bold="true">
+								<paragraph leftIndent="6"/>
+								<expression><![CDATA[$F{marksObtaiend}]]></expression>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+</jasperReport>

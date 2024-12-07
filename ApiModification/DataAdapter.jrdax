@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl">
+	<name>Local Host Connectivity</name>
+	<driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver>
+	<username>sa</username>
+	<password>1234</password>
+	<url>jdbc:sqlserver://localhost:1433;databaseName=khajna</url>
+	<database></database>
+	<savePassword>true</savePassword>
+	<serverAddress></serverAddress>
+</jdbcDataAdapter>
