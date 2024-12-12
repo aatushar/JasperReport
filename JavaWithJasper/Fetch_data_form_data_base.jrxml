@@ -1,0 +1,73 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="StudentScoreCard" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf65ac3e-46d4-4ed2-9ccd-ae5e00fe32bf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<query language="sql"><![CDATA[SELECT 
+                subjectName,
+                totalMarks,
+                marksObtained,
+                studentName,
+                year,
+                advisor,
+                gradingPeriod
+            FROM 
+                StudentScoreCard]]></query>
+	<field name="subjectName" class="java.lang.String"/>
+	<field name="totalMarks" class="java.lang.Float"/>
+	<field name="marksObtained" class="java.lang.Float"/>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="year" class="java.lang.String"/>
+	<field name="advisor" class="java.lang.String"/>
+	<field name="gradingPeriod" class="java.lang.String"/>
+	<title height="50">
+		<element kind="staticText" uuid="2c42567c-d0e4-4021-b39a-31412323f428" x="0" y="0" width="555" height="30" fontSize="18.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Student Score Card Report]]></text>
+		</element>
+	</title>
+	<columnHeader height="30">
+		<element kind="staticText" uuid="0f3fb0d1-ad6d-4fa7-8e6b-aaf722fe9b58" x="0" y="0" width="80" height="30">
+			<text><![CDATA[Subject Name]]></text>
+		</element>
+		<element kind="staticText" uuid="76e6b2d3-1cac-4245-b22f-d13852a1c321" x="90" y="0" width="80" height="30">
+			<text><![CDATA[Total Marks]]></text>
+		</element>
+		<element kind="staticText" uuid="c4cf684f-92c9-43a7-a929-1cb86e31d649" x="180" y="0" width="80" height="30">
+			<text><![CDATA[Marks Obtained]]></text>
+		</element>
+		<element kind="staticText" uuid="d8728aee-0471-44fb-9e0b-c5b46925f4a5" x="270" y="0" width="80" height="30">
+			<text><![CDATA[Student Name]]></text>
+		</element>
+		<element kind="staticText" uuid="384ba68a-d1dd-480a-8d3f-d0b1262aac7b" x="360" y="0" width="80" height="30">
+			<text><![CDATA[Year]]></text>
+		</element>
+		<element kind="staticText" uuid="15a57962-17e9-4dab-b4ca-67a95be21fab" x="450" y="0" width="80" height="30">
+			<text><![CDATA[Advisor]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30">
+			<element kind="textField" uuid="8cd7ef84-d8c8-4909-8d16-eceac609ddeb" x="0" y="0" width="80" height="30">
+				<expression><![CDATA[$F{subjectName}]]></expression>
+			</element>
+			<element kind="textField" uuid="001c6579-3ce8-4f82-b3dc-f9ef844e0bfb" x="90" y="0" width="80" height="30">
+				<expression><![CDATA[$F{totalMarks}]]></expression>
+			</element>
+			<element kind="textField" uuid="63d1b047-17fc-43e9-b722-068d7ec078c6" x="180" y="0" width="80" height="30">
+				<expression><![CDATA[$F{marksObtained}]]></expression>
+			</element>
+			<element kind="textField" uuid="03c00653-7dbc-43d1-aa5f-333966e5a6c2" x="270" y="0" width="80" height="30">
+				<expression><![CDATA[$F{studentName}]]></expression>
+			</element>
+			<element kind="textField" uuid="0c194543-e46b-4786-be64-462b2070f06e" x="360" y="0" width="80" height="30">
+				<expression><![CDATA[$F{year}]]></expression>
+			</element>
+			<element kind="textField" uuid="3e86ff97-c20e-4e38-97a8-85f5940ab53e" x="450" y="0" width="80" height="30">
+				<expression><![CDATA[$F{advisor}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<pageFooter height="20">
+		<element kind="staticText" uuid="d2002d9e-f591-424f-a815-0f5aa5ccd82d" x="0" y="0" width="555" height="20">
+			<text><![CDATA[Page Footer]]></text>
+		</element>
+	</pageFooter>
+</jasperReport>

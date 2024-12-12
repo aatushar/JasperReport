@@ -1,0 +1,58 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="SimpleEmployeeData" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7f9f9560-2911-400d-9b49-942dae234ca4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<property name="net.sf.jasperreports.export.character.encoding" value="UTF-8"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<query language="sql"><![CDATA[SELECT name, designation FROM employeeDetails]]></query>
+	<field name="name" class="java.lang.String"/>
+	<field name="designation" class="java.lang.String"/>
+	<title height="50">
+		<element kind="staticText" uuid="53ca9372-8111-4e67-b10c-fcb643a4ab89" x="0" y="0" width="555" height="30" fontSize="18.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Employee Details Report]]></text>
+		</element>
+	</title>
+	<columnHeader height="30">
+		<element kind="staticText" uuid="3da75ce2-d3fb-4cc2-9899-3817032e7668" x="0" y="0" width="150" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[Name]]></text>
+		</element>
+		<element kind="staticText" uuid="8b14c28e-dcb3-4cc5-8dea-5e1a0dc604f6" x="150" y="0" width="150" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[Designation]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30">
+			<element kind="textField" uuid="8d55c871-63fb-4093-a5c3-54006411691c" x="0" y="0" width="150" height="30">
+				<expression><![CDATA[$F{name}]]></expression>
+			</element>
+			<element kind="textField" uuid="2a91ef47-4844-4195-bc39-1806639efd14" x="150" y="0" width="150" height="30">
+				<expression><![CDATA[$F{designation}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>

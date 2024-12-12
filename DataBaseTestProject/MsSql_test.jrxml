@@ -1,0 +1,70 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="EmployeeReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12345678-1234-5678-1234-567812345678">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<query language="sql"><![CDATA[SELECT employee_id,
+                   first_name,
+                   last_name,
+                   department,
+                   hire_date,
+                   salary
+            FROM dbo.Employee]]></query>
+	<field name="employee_id" class="java.lang.Integer"/>
+	<field name="first_name" class="java.lang.String"/>
+	<field name="last_name" class="java.lang.String"/>
+	<field name="department" class="java.lang.String"/>
+	<field name="hire_date" class="java.sql.Date"/>
+	<field name="salary" class="java.math.BigDecimal"/>
+	<background/>
+	<title height="50">
+		<element kind="staticText" uuid="7edf46f9-20b9-47b5-a96b-d83164e24d5a" x="0" y="0" width="555" height="30" fontSize="18.0" bold="true">
+			<text><![CDATA[Employee Report]]></text>
+		</element>
+	</title>
+	<columnHeader height="30">
+		<element kind="staticText" uuid="6047cf9a-4f9f-4eff-9348-ad903229b09e" x="0" y="0" width="50" height="30">
+			<text><![CDATA[ID]]></text>
+		</element>
+		<element kind="staticText" uuid="d778eb7a-c800-4143-81ed-f25a1a1c971e" x="60" y="0" width="100" height="30">
+			<text><![CDATA[First Name]]></text>
+		</element>
+		<element kind="staticText" uuid="2fa4e644-1534-4607-a60c-1c616de469f3" x="170" y="0" width="100" height="30">
+			<text><![CDATA[Last Name]]></text>
+		</element>
+		<element kind="staticText" uuid="3a15e479-f0a0-4213-871b-1188d37eff71" x="280" y="0" width="100" height="30">
+			<text><![CDATA[Department]]></text>
+		</element>
+		<element kind="staticText" uuid="4326aa06-05d7-463b-bce7-1db0d31e6e47" x="390" y="0" width="80" height="30">
+			<text><![CDATA[Hire Date]]></text>
+		</element>
+		<element kind="staticText" uuid="24585f6c-c854-47b8-9780-90c7246839ff" x="480" y="0" width="75" height="30">
+			<text><![CDATA[Salary]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30">
+			<element kind="textField" uuid="18dd8747-fca4-4551-b639-ea8234f3d934" x="0" y="0" width="50" height="30">
+				<expression><![CDATA[$F{employee_id}]]></expression>
+			</element>
+			<element kind="textField" uuid="d37b9001-f284-4660-b0bc-09940e1b6771" x="60" y="0" width="100" height="30">
+				<expression><![CDATA[$F{first_name}]]></expression>
+			</element>
+			<element kind="textField" uuid="7b0a4101-aaaf-46f4-b37a-32e77e08b9bb" x="170" y="0" width="100" height="30">
+				<expression><![CDATA[$F{last_name}]]></expression>
+			</element>
+			<element kind="textField" uuid="52dc626f-b864-4b86-94b3-ee9283a995d6" x="280" y="0" width="100" height="30">
+				<expression><![CDATA[$F{department}]]></expression>
+			</element>
+			<element kind="textField" uuid="8238042c-4fa9-4b65-bad8-cbd9ad3e2202" x="390" y="0" width="80" height="30">
+				<expression><![CDATA[$F{hire_date}]]></expression>
+			</element>
+			<element kind="textField" uuid="35333077-179e-43d7-82a6-3a1c1e4589c9" x="480" y="0" width="75" height="30">
+				<expression><![CDATA[$F{salary}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<pageFooter height="20">
+		<element kind="staticText" uuid="6ba58f9c-2559-4687-8ce3-142af6611260" x="0" y="0" width="555" height="20">
+			<text><![CDATA[Page Footer]]></text>
+		</element>
+	</pageFooter>
+</jasperReport>
