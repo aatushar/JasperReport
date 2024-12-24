@@ -1,0 +1,163 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Program_Due_Payment_List_All_Time" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="49f22294-f6c4-49b1-b710-7afecb8a8d0d">
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="Dataset1" uuid="d0fade1d-bb2f-4746-b6c4-593dc62c81c7">
+		<query language="sql"><![CDATA[]]></query>
+	</dataset>
+	<query language="sql"><![CDATA[]]></query>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="5a704795-f5b1-476c-b69c-6ecee978370a" x="303" y="1" width="167" height="19">
+			<text><![CDATA[Program Due Payment List-All Time]]></text>
+		</element>
+		<element kind="line" uuid="2f33c41a-ca47-4f86-a007-4955ef029024" x="303" y="20" width="167" height="1"/>
+		<element kind="staticText" uuid="5514cc97-6608-4868-85bd-47bce39718dc" x="340" y="21" width="90" height="19">
+			<text><![CDATA[Chiklee Water Park]]></text>
+		</element>
+		<element kind="line" uuid="669e0536-a8c7-42f3-8d41-877011a07a87" x="340" y="39" width="90" height="1"/>
+		<element kind="staticText" uuid="8819d3a6-5a10-4628-bb00-56896c9cfc80" x="331" y="39" width="109" height="19">
+			<text><![CDATA[Honumantola, Rangpur]]></text>
+		</element>
+		<element kind="line" uuid="9a462991-690b-494d-8ff1-42eecf13e969" x="331" y="57" width="109" height="1"/>
+		<element kind="staticText" uuid="fcea7fe8-691c-4be8-bbcc-fd645b348eae" x="687" y="15" width="100" height="15" bold="true" italic="true">
+			<text><![CDATA[Report# C_D_02D]]></text>
+		</element>
+		<element kind="staticText" uuid="c4b589f3-14f2-4333-bf58-500726b305f6" x="687" y="32" width="113" height="15" bold="true" italic="true">
+			<text><![CDATA[Print Date: 7/8/2023]]></text>
+		</element>
+		<element kind="staticText" uuid="d39a8842-1b35-4f93-a3d8-a92192640a04" x="687" y="50" width="113" height="15" bold="true" italic="true">
+			<text><![CDATA[Time: 11:03 AM]]></text>
+		</element>
+		<element kind="image" uuid="26419365-e0c5-4569-ac85-b7f0bae3e883" x="10" y="14" width="69" height="56">
+			<expression><![CDATA["E:/Tushar-Zit/Flutter Project/My project/Flutter/chiklee_pos/installer/5.7/chiklee_logo.png"]]></expression>
+		</element>
+	</title>
+	<pageHeader height="233" splitType="Stretch"/>
+	<detail>
+		<band height="222" splitType="Stretch">
+			<element kind="component" uuid="f2143441-af87-4035-a544-bbf65725b091" x="-11" y="22" width="832" height="108">
+				<component kind="table">
+					<datasetRun uuid="b5646a21-8005-4cac-8ce4-08ef28a706c5" subDataset="Dataset1">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<column kind="single" uuid="36bb170c-a622-4749-836c-d87240dd0ff0" width="80">
+						<tableHeader height="30" rowSpan="1" style="Table_TH">
+							<element kind="staticText" uuid="8361d29b-8141-44af-bf8c-7d16ca28f78a" x="0" y="0" width="80" height="30" forecolor="#F74514" backcolor="#FCF8F7" hTextAlign="Center">
+								<text><![CDATA[SL]]></text>
+							</element>
+						</tableHeader>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+					</column>
+					<column kind="single" uuid="6c096280-8dc7-415e-b71a-bd257499d731" width="90">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+					</column>
+					<column kind="single" uuid="3f1a68e3-496a-498e-85e8-af25a28ba554" width="140">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+					</column>
+					<column kind="single" uuid="a2e0482a-690c-47f4-92b8-5d38e757cf3b" width="220">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+					</column>
+					<column kind="single" uuid="10f61744-2bf8-40db-ab78-d81f2659a038" width="130">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+					</column>
+					<column kind="single" uuid="c814184a-220c-4b76-98c2-7a9934acda48" width="150">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+					</column>
+					<column kind="single" uuid="ef08ea32-9928-4cde-8166-f7f351198c2f" width="110">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+					</column>
+					<column kind="single" uuid="bd651171-2d75-4b79-b795-9e1193567aa7" width="100">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+					</column>
+					<column kind="single" uuid="63cf93a3-ddb0-4bd4-b0ea-2a898c7e5a36" width="100">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+					</column>
+					<column kind="single" uuid="3aa12eff-c063-4711-814f-14905966fbaa" width="100">
+						<tableHeader height="30" rowSpan="1" style="Table_TH"/>
+						<tableFooter height="30" rowSpan="1" style="Table_TH"/>
+						<columnHeader height="30" rowSpan="1" style="Table_CH"/>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column10"/>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+			</element>
+		</band>
+	</detail>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

@@ -1,0 +1,50 @@
+BEGIN
+    SELECT 
+        program_name,
+        customer_name,
+        phone,
+        program_date,
+        Program_Time,
+        number_of_guest,
+        total_amount_with_vat,
+        total_paid_amount,
+        due_amount
+    FROM (
+        SELECT 
+            trns00g_order_master.program_name,
+            cs_customer_details.customer_name,
+            cs_customer_contact_info.phone,
+            trns00g_order_master.program_date,
+            CONCAT (
+                DATE_Format(trns00g_order_master.program_start_time, '%d-%m-%Y'), 
+                ' To ', 
+                DATE_Format(trns00g_order_master.program_end_time, '%d-%m-%Y')
+            ) AS Program_Time,
+            trns00g_order_master.number_of_guest,
+            trns00g_order_master.total_amount_with_vat,
+            COALESCE(SUM(trns50a_payment_master.paid_amount), 0) AS total_paid_amount,
+            (trns00g_order_master.total_amount_with_vat - COALESCE(SUM(trns50a_payment_master.paid_amount), 0)) AS due_amount
+        FROM 
+            trns00g_order_master
+        JOIN 
+            cs_customer_details ON cs_customer_details.id = trns00g_order_master.customer_id
+        JOIN 
+            cs_customer_contact_info ON cs_customer_contact_info.customer_id = cs_customer_details.id
+        LEFT JOIN 
+            trns50a_payment_master ON trns50a_payment_master.order_id = trns00g_order_master.id
+        WHERE 
+            trns00g_order_master.program_name IS NOT NULL
+        GROUP BY 
+            trns00g_order_master.program_name,
+            cs_customer_details.customer_name,
+            cs_customer_contact_info.phone,
+            trns00g_order_master.program_date,
+            trns00g_order_master.program_start_time,
+            trns00g_order_master.program_end_time,
+            trns00g_order_master.number_of_guest,
+            trns00g_order_master.total_amount_with_vat 
+        ORDER BY 
+            trns00g_order_master.program_date
+    ) AS Subquery
+    WHERE due_amount > 0;
+END

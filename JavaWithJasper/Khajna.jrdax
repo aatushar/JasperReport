@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl">
+	<name>HpLocal</name>
+	<driver>net.sourceforge.jtds.jdbc.Driver</driver>
+	<username>sa</username>
+	<password>1234</password>
+	<url>jdbc:jtds:sqlserver://192.168.10.220/Khajna</url>
+	<database></database>
+	<savePassword>true</savePassword>
+	<serverAddress></serverAddress>
+</jdbcDataAdapter>
