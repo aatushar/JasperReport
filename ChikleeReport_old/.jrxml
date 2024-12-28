@@ -1,0 +1,50 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name=".jrxml" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3590fa1d-fa8a-44d7-99c8-47bcbcb8689f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ChikliLocal.jrdax"/>
+	<query language="SQL"><![CDATA[SELECT * 
+FROM [Order Details]
+]]></query>
+	<field name="SL" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="SL"/>
+		<property name="com.jaspersoft.studio.field.label" value="SL"/>
+	</field>
+	<field name="Customer Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Customer Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Customer Name"/>
+	</field>
+	<field name="Mobile No" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Mobile No"/>
+		<property name="com.jaspersoft.studio.field.label" value="Mobile No"/>
+	</field>
+	<field name="Order No" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Order No"/>
+		<property name="com.jaspersoft.studio.field.label" value="Order No"/>
+	</field>
+	<field name="Sales Type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Sales Type"/>
+		<property name="com.jaspersoft.studio.field.label" value="Sales Type"/>
+	</field>
+	<field name="Waiter Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Waiter Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Waiter Name"/>
+	</field>
+	<field name="Order DateTime" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="Order DateTime"/>
+		<property name="com.jaspersoft.studio.field.label" value="Order DateTime"/>
+	</field>
+	<field name="Amount (BDT)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="Amount (BDT)"/>
+		<property name="com.jaspersoft.studio.field.label" value="Amount (BDT)"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch"/>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
