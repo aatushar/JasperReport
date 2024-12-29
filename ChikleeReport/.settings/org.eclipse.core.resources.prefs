@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
 encoding/<project>=UTF-8
 encoding/A01_Item_Wise_Daily_Sale_Report.jrxml=UTF-8
-encoding/Order_Wise_Daily_Sells_Report.jrxml=UTF-8
+encoding/A02_Order_Wise_Daily_Sells_Report.jrxml=UTF-8
+encoding/A03_Waiter_Wise_Daily_Sells_Report.jrxml=UTF-8
+encoding/A04_Waiter_Wise_Sells_Report.jrxml=UTF-8
+encoding/A05_Kitchen_Wise_sells_report.jrxml=UTF-8
