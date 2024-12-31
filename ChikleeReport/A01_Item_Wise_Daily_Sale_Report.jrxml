@@ -1,7 +1,7 @@
 <!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
 <jasperReport name="A01_Item_Wise_Daily_Sale_Report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5e9ebb9d-b298-44c5-a6bb-d45729675823">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ChikliLocal.jrdax"/>
 	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#000000"/>
@@ -91,7 +91,7 @@
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ChikliLocal.jrdax"/>
 		<query language="SQL"><![CDATA[SELECT [SL], [Item Name], [Item Name Bn], [UOM], [Qty], [Price (BDT)], [Amount (BDT)]
-FROM [Item Details]]]></query>
+FROM [A01_Item_Details]]]></query>
 		<field name="SL" class="java.lang.Integer">
 			<property name="com.jaspersoft.studio.field.name" value="SL"/>
 			<property name="com.jaspersoft.studio.field.label" value="SL"/>
@@ -146,7 +146,7 @@ FROM [Item Details]]]></query>
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ChikliLocal.jrdax"/>
 		<query language="SQL"><![CDATA[SELECT [SL], [Item Name], [Item Name Bn], [UOM], [Qty], [Price (BDT)], [Amount (BDT)]
-FROM [Item Details]
+FROM [A01_Item_Details]
 ]]></query>
 		<field name="SL" class="java.lang.Integer">
 			<property name="com.jaspersoft.studio.field.name" value="SL"/>
@@ -199,11 +199,10 @@ FROM [Item Details]
 		</group>
 	</dataset>
 	<dataset name="ChikliItem" uuid="5e98652e-4463-44db-8a8b-74318b5a182b">
-		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value="IkEwMV9JdGVtX0RldGFpbHMiICwxNSwxNSxmZmRiYWFhOC04ODlhLTQ2YWYtOTRkMi01YmE0MDVh&#xa;MTk4MDU7"/>
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ChikliLocal.jrdax"/>
-		<query language="SQL"><![CDATA[SELECT [SL], [Item Name], [Item Name Bn], [UOM], [Qty], [Price (BDT)], [Amount (BDT)]
-FROM [Item Details]
-]]></query>
+		<query language="SQL"><![CDATA[SELECT *
+FROM "A01_Item_Details"]]></query>
 		<field name="SL" class="java.lang.Integer">
 			<property name="com.jaspersoft.studio.field.name" value="SL"/>
 			<property name="com.jaspersoft.studio.field.label" value="SL"/>
@@ -240,7 +239,7 @@ FROM [Item Details]
 		</variable>
 	</dataset>
 	<query language="SQL"><![CDATA[SELECT [SL], [Item Name], [Item Name Bn], [UOM], [Qty], [Price (BDT)], [Amount (BDT)]
-FROM [Item Details]]]></query>
+FROM [A01_Item_Details]]]></query>
 	<field name="SL" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.name" value="SL"/>
 		<property name="com.jaspersoft.studio.field.label" value="SL"/>
@@ -344,97 +343,97 @@ FROM [Item Details]]]></query>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
 					</column>
-					<column kind="single" uuid="7997c4c8-1354-4efe-ac0e-4a9ac8f218ee" width="62">
+					<column kind="single" uuid="7997c4c8-1354-4efe-ac0e-4a9ac8f218ee" width="61">
 						<tableFooter height="30" rowSpan="1" style="Table 2_TH"/>
 						<columnHeader height="30" style="Table 2_CH">
-							<element kind="staticText" uuid="e0ce703e-c3ac-4bc2-a48d-994d7a1ccecc" x="0" y="0" width="62" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" uuid="e0ce703e-c3ac-4bc2-a48d-994d7a1ccecc" x="0" y="0" width="61" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[Item Name]]></text>
 							</element>
 						</columnHeader>
 						<detailCell height="30" style="Table 2_TD">
-							<element kind="textField" uuid="0415fcc0-b81f-449c-9977-ce91c528a430" x="0" y="0" width="62" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="textField" uuid="0415fcc0-b81f-449c-9977-ce91c528a430" x="0" y="0" width="61" height="30" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$F{Item Name}]]></expression>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
 					</column>
-					<column kind="single" uuid="a21f1b1d-1d57-4785-896b-a827bbc197f1" width="84">
+					<column kind="single" uuid="a21f1b1d-1d57-4785-896b-a827bbc197f1" width="83">
 						<tableFooter height="30" rowSpan="1" style="Table 2_TH"/>
 						<columnHeader height="30" style="Table 2_CH">
-							<element kind="staticText" uuid="c5909056-e03f-4c51-adeb-83d77d69fd0e" x="0" y="0" width="84" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" uuid="c5909056-e03f-4c51-adeb-83d77d69fd0e" x="0" y="0" width="83" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[Item Name Bn]]></text>
 							</element>
 						</columnHeader>
 						<detailCell height="30" style="Table 2_TD">
-							<element kind="textField" uuid="988dd486-f1db-4594-b96a-0da351ac9a2e" x="0" y="0" width="84" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="textField" uuid="988dd486-f1db-4594-b96a-0da351ac9a2e" x="0" y="0" width="83" height="30" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$F{Item Name Bn}]]></expression>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
 					</column>
-					<column kind="single" uuid="e6f4a765-ab7c-4d48-8d8c-a7bc928ca0c4" width="56">
+					<column kind="single" uuid="e6f4a765-ab7c-4d48-8d8c-a7bc928ca0c4" width="55">
 						<tableFooter height="30" rowSpan="1" style="Table 2_TH">
-							<element kind="staticText" uuid="cf265d40-96e2-486e-a897-5c5c6ce1965d" x="0" y="0" width="56" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" uuid="cf265d40-96e2-486e-a897-5c5c6ce1965d" x="0" y="0" width="55" height="30" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[Sub Total :]]></text>
 							</element>
 						</tableFooter>
 						<columnHeader height="30" style="Table 2_CH">
-							<element kind="staticText" uuid="60db8482-6e2c-45b1-8918-20ba6c694b4b" x="0" y="0" width="56" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" uuid="60db8482-6e2c-45b1-8918-20ba6c694b4b" x="0" y="0" width="55" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[UOM]]></text>
 							</element>
 						</columnHeader>
 						<detailCell height="30" style="Table 2_TD">
-							<element kind="textField" uuid="a1a66dad-907b-4698-94c0-36bdb9f58ac8" x="0" y="0" width="56" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="textField" uuid="a1a66dad-907b-4698-94c0-36bdb9f58ac8" x="0" y="0" width="55" height="30" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$F{UOM}]]></expression>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
 					</column>
-					<column kind="single" uuid="674a2289-fd3f-4998-873a-8352907c8acd" width="78">
+					<column kind="single" uuid="674a2289-fd3f-4998-873a-8352907c8acd" width="76">
 						<tableFooter height="30" rowSpan="1" style="Table 2_TH">
-							<element kind="textField" uuid="b5bc3601-cb31-461a-921b-90f7d2d419fc" x="0" y="0" width="78" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="textField" uuid="b5bc3601-cb31-461a-921b-90f7d2d419fc" x="0" y="0" width="76" height="30" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$V{Price (BDT)1}]]></expression>
 							</element>
 						</tableFooter>
 						<columnHeader height="30" style="Table 2_CH">
-							<element kind="staticText" uuid="49b92a16-5773-491d-8b09-416e8e0371fa" x="0" y="0" width="78" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" uuid="49b92a16-5773-491d-8b09-416e8e0371fa" x="0" y="0" width="76" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[Qty]]></text>
 							</element>
 						</columnHeader>
 						<detailCell height="30" style="Table 2_TD">
-							<element kind="textField" uuid="f84e6327-94f9-4b58-918f-9616447c2907" x="0" y="0" width="78" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="textField" uuid="f84e6327-94f9-4b58-918f-9616447c2907" x="0" y="0" width="76" height="30" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$F{Qty}]]></expression>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
 					</column>
-					<column kind="single" uuid="261ba2fd-62bb-4449-b331-20063aa0829a" width="110">
+					<column kind="single" uuid="261ba2fd-62bb-4449-b331-20063aa0829a" width="107">
 						<tableFooter height="30" rowSpan="1" style="Table 2_TH"/>
 						<columnHeader height="30" style="Table 2_CH">
-							<element kind="staticText" uuid="36b4a4cb-8cfa-4f76-9cf6-fd43d1745b3f" x="0" y="0" width="110" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" uuid="36b4a4cb-8cfa-4f76-9cf6-fd43d1745b3f" x="0" y="0" width="107" height="30" forecolor="#FCF8F7" backcolor="#142252" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[Price (BDT)]]></text>
 							</element>
 						</columnHeader>
 						<detailCell height="30" style="Table 2_TD">
-							<element kind="textField" uuid="2cb27d78-fa51-4082-abb1-69c44547aedc" x="0" y="0" width="110" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="textField" uuid="2cb27d78-fa51-4082-abb1-69c44547aedc" x="0" y="0" width="107" height="30" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$F{Price (BDT)}]]></expression>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
 					</column>
-					<column kind="single" uuid="8ad57d44-008f-4afc-8f8a-bf8edfc2ad39" width="82">
+					<column kind="single" uuid="8ad57d44-008f-4afc-8f8a-bf8edfc2ad39" width="80">
 						<tableFooter height="30" rowSpan="1" style="Table 2_TH">
-							<element kind="textField" uuid="0096e924-c1bc-4b63-ab7f-d287d46b89da" x="0" y="0" width="82" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="textField" uuid="0096e924-c1bc-4b63-ab7f-d287d46b89da" x="0" y="0" width="80" height="30" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$V{Amount (BDT)1}]]></expression>
 							</element>
 						</tableFooter>
 						<columnHeader height="30" style="Table 2_CH">
-							<element kind="staticText" uuid="747d85cf-aeff-4cb6-b817-d806892e3a50" x="0" y="0" width="82" height="30" forecolor="#FCF8F7" backcolor="#12314A" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="staticText" uuid="747d85cf-aeff-4cb6-b817-d806892e3a50" x="0" y="0" width="80" height="30" forecolor="#FCF8F7" backcolor="#12314A" hTextAlign="Center" vTextAlign="Middle">
 								<text><![CDATA[Amount (BDT)]]></text>
 							</element>
 						</columnHeader>
 						<detailCell height="30" style="Table 2_TD">
-							<element kind="textField" uuid="9853a91c-d705-48e7-b227-d827724fa839" x="0" y="0" width="82" height="30" hTextAlign="Center" vTextAlign="Middle">
+							<element kind="textField" uuid="9853a91c-d705-48e7-b227-d827724fa839" x="0" y="0" width="80" height="30" hTextAlign="Center" vTextAlign="Middle">
 								<expression><![CDATA[$F{Amount (BDT)}]]></expression>
 							</element>
 						</detailCell>
@@ -445,6 +444,7 @@ FROM [Item Details]]]></query>
 				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 2_TH"/>
 				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 2_CH"/>
 				<property name="com.jaspersoft.studio.table.style.detail" value="Table 2_TD"/>
+				<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
 			</element>
 		</band>
 	</detail>
