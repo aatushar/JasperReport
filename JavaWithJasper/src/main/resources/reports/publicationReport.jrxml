@@ -1,0 +1,76 @@
+<jasperReport name="PublicationReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+
+	<!-- Define styles for consistent formatting -->
+	<style name="HeaderStyle" isDefault="false" fontName="Arial" fontSize="14" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="DataStyle" isDefault="false" fontName="Arial" fontSize="12" pdfFontName="Helvetica"/>
+
+	<!-- Correct query placement -->
+	<queryString>
+		<![CDATA[SELECT id, publicationName, image FROM publication]]>
+	</queryString>
+
+	<field name="id" class="java.lang.Integer"/>
+	<field name="publicationName" class="java.lang.String"/>
+	<field name="image" class="java.lang.String"/>
+
+	<!-- Fixed title section -->
+	<title>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="30"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Publication Report]]></text>
+			</staticText>
+		</band>
+	</title>
+
+	<!-- Header for columns -->
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" style="HeaderStyle"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="200" height="30" style="HeaderStyle"/>
+				<text><![CDATA[Publication Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="200" height="30" style="HeaderStyle"/>
+				<text><![CDATA[Image URL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+
+	<!-- Detail section for data rows -->
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" style="DataStyle"/>
+				<textFieldExpression><![CDATA[$F{id} != null ? $F{id} : "N/A"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="200" height="20" style="DataStyle"/>
+				<textFieldExpression><![CDATA[$F{publicationName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="200" height="20" style="DataStyle"/>
+				<textFieldExpression><![CDATA[$F{image}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+
+	<!-- Footer for page numbering -->
+	<pageFooter>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

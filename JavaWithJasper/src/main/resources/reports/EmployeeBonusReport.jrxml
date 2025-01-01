@@ -1,0 +1,72 @@
+<jasperReport name="EmployeeBonusReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+    <field name="bonusId" class="java.lang.Integer"/>
+    <field name="employeeName" class="java.lang.String"/>
+    <field name="jobTitle" class="java.lang.String"/>
+    <field name="bonusAmount" class="java.lang.Double"/>
+    <field name="bonusDate" class="java.lang.String"/>
+    <field name="remarks" class="java.lang.String"/>
+
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Employee Bonus Report]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="30">
+            <staticText>
+                <reportElement x="0" y="0" width="90" height="30"/>
+                <text><![CDATA[Bonus ID]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="100" y="0" width="150" height="30"/>
+                <text><![CDATA[Employee Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="0" width="150" height="30"/>
+                <text><![CDATA[Job Title]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="420" y="0" width="90" height="30"/>
+                <text><![CDATA[Bonus Amount]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="90" height="20"/>
+                <textFieldExpression><![CDATA[$F{bonusId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="100" y="0" width="150" height="20"/>
+                <textFieldExpression><![CDATA[$F{employeeName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="260" y="0" width="150" height="20"/>
+                <textFieldExpression><![CDATA[$F{jobTitle}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="420" y="0" width="90" height="20"/>
+                <textFieldExpression><![CDATA[$F{bonusAmount}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="555" height="20"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>
